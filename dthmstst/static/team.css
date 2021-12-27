@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box !important;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit !important;
+}
+.column {
+  float:left;
+  width: 33.33% !important;
+  margin-bottom: 16px !important;
+  padding: 0 5px !important;
+
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 750px) {
+  .column {
+    width: 100% !important;
+    display: block !important;
+  }
+}
+.header{
+    position:relative;
+    top: 0em;
+    padding: 10px;
+    margin-bottom: 30px;
+    text-shadow: 0 4px 8px 0 rgba(61, 56, 56, 0.2);
+    box-shadow:  0 4px 8px 0 rgba(61, 56, 56, 0.2);
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:x-large;
+    text-align: center;
+    color:  rgb(255, 255, 255);
+}
+
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+img{
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  width: 40%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(61, 56, 56, 0.2) !important;
+  border-radius: 5px !important;
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px !important;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "" !important;
+  clear: both !important;
+  display: table !important;
+}
+
+.title {
+  color: grey;
+}
+

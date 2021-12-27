@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Register {% endblock %}
+{% block content %}
+<div class="container  pt-4 " >
+    <div class="row align-items-center ">
+    <div class="col-lg-6 text-center text-lg-start d-none d-lg-block">
+        
+        <img src="{% static 'img/Group 20.png' %}" class=" w-75" alt="">
+    </div>
+    <div class=" col-lg-6 d-flex bg-light  p-4 mx-auto rounded shadow" style="max-width: 750px;">
+        
+        <form class="needs-validation" method="POST">
+          {% csrf_token %}
+          <div class="row g-3">
+            <h4 class="mb-2 fw-bold">Registeration</h4>
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="pass1" placeholder="Enter your password" required>
+              <div class="invalid-feedback">
+                Please enter your password.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="password2" class="form-label">Confirm password</label>
+              <input type="password" class="form-control" id="pass2" placeholder="Enter your password again" required>
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Sex</label>
+              <select class="form-select" id="Sex" required>
+                <option value="">Choose...</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid sex.
+              </div>
+            </div>
+            <div class="col-md-5">
+                <label for="country" class="form-label">Role</label>
+                <select class="form-select" id="Role" required>
+                  <option value="">Choose...</option>
+                  <option>Doctor</option>
+                  <option>Patient</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid role.
+                </div>
+              </div>
+              
+          <button class="w-100 btn btn-primary btn-lg mt-4 fw-bold" type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}
